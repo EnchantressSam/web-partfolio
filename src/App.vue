@@ -1,24 +1,56 @@
 <template>
   <div id="app">
-   <h1>hi</h1>
+    <HeaderSection />
+    <HeroSection />
+    <AboutSection />
+    <ProjectsSection />
+    <ContactsSection />
+    <FooterSection />
   </div>
 </template>
 
 <script>
+import HeaderSection from './components/HeaderSection.vue'
+import HeroSection from './components/HeroSection.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
+import ContactsSection from './components/ContactsSection.vue'
+import FooterSection from './components/FooterSection.vue'
+import AboutSection from './components/AboutSection.vue'
 
 export default {
-  name: 'App'
-
+  name: 'App',
+  components: {
+    HeaderSection,
+    HeroSection,
+    AboutSection,
+    ProjectsSection,
+    ContactsSection,
+    FooterSection
+  }
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/* Общие стили для тем */
+.dark {
+  background-color: #333;
+  color: white;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Дополнительные стили для компонентов */
+#app {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4C504F;
+  }
 </style>
